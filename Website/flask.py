@@ -7,11 +7,12 @@ app = Flask(__name__)
 def home():
   return redirect(url_for("bot"))
   
-@app.route('/bot')
+@app.route('/bot', methods=['GET','POST'])
 def bot():
   return render_template(
     "bot.html",
-    home=url_for("home")
+    home=url_for("home"),
+    url=url_for('static', filename="text.png")
     )
   
 def run():
