@@ -15,6 +15,7 @@ def bot():
     text = url_for("logo")
     )
 
+#sources
 @app.route('/admin/source/text.jpg')
 def logo():
   return render_template("text.jpg")
