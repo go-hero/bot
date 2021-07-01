@@ -18,7 +18,7 @@ def bot():
 #sources
 @app.route('/admin/source/text.jpg')
 def logo():
-  return render_template("text.jpg")
+  return render_template("20210701_122531.png")
   
 def run():
   app.run(host="0.0.0.0",port=8080)
