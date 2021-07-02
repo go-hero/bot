@@ -2,13 +2,9 @@ from flask import *
 from threading import Thread
 
 app = Flask(__name__)
-
-@app.route('/')
-def home():
-  return redirect(url_for("bot"))
   
-@app.route('/bot', methods=['GET','POST'])
-def bot():
+@app.route('/', methods=['GET','POST'])
+def home():
   return render_template(
     "bot.html",
     home=url_for("home"),
